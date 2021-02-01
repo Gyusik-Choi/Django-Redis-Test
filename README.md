@@ -58,6 +58,8 @@ bulk_create 를 통해서 db에 임의의 데이터 1000개 생성
 
 
 
+
+
 ### 진행관련 부연정리
 
 #### 윈도우 레디스 설치
@@ -78,3 +80,21 @@ bulk_create 를 통해서 db에 임의의 데이터 1000개 생성
 
 
 
+
+
+### 오류
+
+redis-server 입력시 아래의 오류 발생시 해결방법
+
+`[3008] #Creating Server TCP listening socket *:6379: bind: No such file or directory`
+
+```
+redis-cli
+shutdown
+exit
+redis-server
+```
+
+이렇게 해서 문제 해결
+
+https://m.blog.naver.com/PostView.nhn?blogId=ambidext&logNo=220664344209&proxyReferer=https:%2F%2Fwww.google.com%2F
